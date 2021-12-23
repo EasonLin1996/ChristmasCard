@@ -14,6 +14,7 @@
       margin: 0;
       height: 100%;
       background-color: rgb(28, 41, 82);
+      transition: all 2s linear;
     }
     img {
       width: 100%;
@@ -44,7 +45,7 @@
       opacity: 0;
       overflow: hidden;
       text-align: center;
-      height: 100vh;
+      height: 95vh;
       background-image: url("https://inews.gtimg.com/newsapp_bt/0/12930138218/1000");
       background-repeat: repeat;
       background-size: contain;
@@ -234,10 +235,10 @@
   <script>
     const subTitle = document.getElementsByClassName('subTitle');
     const description = document.getElementsByClassName('description');
+    const body = document.body;
     const main = document.getElementsByClassName('main');
     const subMain = document.getElementsByClassName('subMain');
-    console.log(subTitle);
-    console.log(description);
+    console.log(body);
     setTimeout(function() { 
       subTitle[0].classList.add("fadeIn");
     }, 1000);
@@ -249,6 +250,7 @@
     }, 3000);
     setTimeout(function() { 
       subMain[0].classList.add("fadeIn");
+      body.setAttribute("style", "background-color: rgb(33,73,73);");
     }, 3000);
   </script>
 </body>
