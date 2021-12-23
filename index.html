@@ -52,12 +52,15 @@
       background-position: center center;
       transition: all 2s linear;
     }
-    .subMain h3 {
+    .subMain-title {
       font-family: 'Montserrat', sans-serif;
       color: white;
       margin-top: 100px;
       letter-spacing: 3px;
       font-size: 30px;
+      opacity: 0;
+      transform: translateX(200px);
+      transition: all 2s linear;
     }
     .imgBox {
       position: absolute;
@@ -121,6 +124,9 @@
     }
     .fadeOut {
       opacity: 0;
+    }
+    .rightToLeft {
+      transform: translateX(0);
     }
     @media screen and (max-width: 768px) {
       .main {
@@ -231,7 +237,7 @@
     </div>
   </div>
   <div class="subMain">
-    <h3>See you soon</h3>
+    <h3 class="subMain-title">See you soon</h3>
   </div>
   <script>
     const subTitle = document.getElementsByClassName('subTitle');
@@ -239,6 +245,7 @@
     const body = document.body;
     const main = document.getElementsByClassName('main');
     const subMain = document.getElementsByClassName('subMain');
+    const subMainTitle = document.getElementsByClassName('subMain-title');
     console.log(body);
     setTimeout(function() { 
       subTitle[0].classList.add("fadeIn");
@@ -251,6 +258,8 @@
     }, 3000);
     setTimeout(function() { 
       subMain[0].classList.add("fadeIn");
+      subMainTitle[0].classList.add("fadeIn");
+      subMainTitle[0].classList.add("rightToLeft");
       body.setAttribute("style", "background-color: rgb(33,73,73);");
     }, 3000);
   </script>
