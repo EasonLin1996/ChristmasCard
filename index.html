@@ -12,17 +12,22 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      background-color: rgb(28, 41, 82);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 100%;
     }
     img {
       width: 100%;
       height: 100%;
       display: block;
+    }
+    .main {
+      position: relative;
+      display: flex;
+      background-color: rgb(28, 41, 82);
+      overflow: hidden;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .imgBox {
       position: absolute;
@@ -91,9 +96,9 @@
       .title {
         font-size: 55px;
       }
-      .container {
-        transform: translateY(-20px);
-      }
+      /* .container {
+        transform: translateY(-40px);
+      } */
       .subTitle {
         font-size: 10px;
         letter-spacing: 3px;
@@ -171,16 +176,18 @@
   </style>
 </head>
 <body>
-  <div class="imgBox rightTop">
-    <img src="https://media-public.canva.com/gF6Vs/MAEtuQgF6Vs/1/s.svg" alt="img">
-  </div>
-  <div class="imgBox leftBottom">
-    <img src="https://media-public.canva.com/UPJ0w/MAEtuXUPJ0w/1/s.svg" alt="img">
-  </div>
-  <div class="container">
-    <h1 class="title">Merry Christmas</h1>
-    <h4 class="subTitle">12/25 18:30 CHRISTMAS PARTY</h4>
-    <h4 class="description">Dress code:Red、Green、Blue</h4>
+  <div class="main">
+    <div class="imgBox rightTop">
+      <img src="https://media-public.canva.com/gF6Vs/MAEtuQgF6Vs/1/s.svg" alt="img">
+    </div>
+    <div class="imgBox leftBottom">
+      <img src="https://media-public.canva.com/UPJ0w/MAEtuXUPJ0w/1/s.svg" alt="img">
+    </div>
+    <div class="container">
+      <h1 class="title">Merry Christmas</h1>
+      <h4 class="subTitle">12/25 18:30 CHRISTMAS PARTY</h4>
+      <h4 class="description">Dress code:Red、Green、Blue</h4>
+    </div>
   </div>
   <script>
     const subTitle = document.getElementsByClassName('subTitle');
