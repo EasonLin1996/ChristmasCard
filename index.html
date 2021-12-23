@@ -21,7 +21,11 @@
       display: block;
     }
     .main {
-      position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
       display: flex;
       background-color: rgb(28, 41, 82);
       overflow: hidden;
@@ -29,6 +33,30 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      transition: all 2s linear;
+      opacity: 1;
+    }
+    .subMain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      overflow: hidden;
+      text-align: center;
+      height: 100vh;
+      background-image: url("https://inews.gtimg.com/newsapp_bt/0/12930138218/1000");
+      background-repeat: repeat;
+      background-size: contain;
+      background-position: center center;
+      transition: all 2s linear;
+    }
+    .subMain h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      margin-top: 100px;
+      letter-spacing: 3px;
+      font-size: 30px;
     }
     .imgBox {
       position: absolute;
@@ -90,9 +118,16 @@
     .fadeIn {
       opacity: 1;
     }
+    .fadeOut {
+      opacity: 0;
+    }
     @media screen and (max-width: 768px) {
       .main {
         height: 90vh;
+      }
+      .subMain {
+        background-repeat: repeat;
+        background-size: cover;
       }
       .imgBox {
         width: 200px;
@@ -193,9 +228,14 @@
       <h4 class="description">Dress code:Red、Green、Blue</h4>
     </div>
   </div>
+  <div class="subMain">
+    <h3>See you soon</h3>
+  </div>
   <script>
     const subTitle = document.getElementsByClassName('subTitle');
     const description = document.getElementsByClassName('description');
+    const main = document.getElementsByClassName('main');
+    const subMain = document.getElementsByClassName('subMain');
     console.log(subTitle);
     console.log(description);
     setTimeout(function() { 
@@ -204,6 +244,12 @@
     setTimeout(function() { 
       description[0].classList.add("fadeIn");
     }, 1500);
+    setTimeout(function() { 
+      main[0].classList.add("fadeOut");
+    }, 3000);
+    setTimeout(function() { 
+      subMain[0].classList.add("fadeIn");
+    }, 3000);
   </script>
 </body>
 </html>
