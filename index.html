@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+  <title>Welcome Christmas Party</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100vh;
+      background-color: rgb(28, 41, 82);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .imgBox {
+      position: absolute;
+      width: 350px;
+      height: auto;
+    }
+    .rightTop {
+      right: -10px;
+      top: 0;
+    }
+    .leftBottom {
+      bottom: 0;
+      left: 0;
+      transform: rotate(-4.70461deg) scale(0.964974, 0.964974);
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .title {
+      font-size: 100px;
+      font-weight: normal;
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      color: rgb(254, 235, 219);
+      animation-name:animateTitle;
+      animation-duration:2s;
+    }
+    .subTitle {
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(121, 203, 214);
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+    .description {
+      font-family: 'Montserrat', sans-serif;
+      color: rgb(121, 203, 214);
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin: 0;
+    }
+    @keyframes animateTitle{
+    0%{
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    /* 50%{
+      background:#f00;
+    } */
+    50%{
+      opacity: 1;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="imgBox rightTop">
+    <img src="https://media-public.canva.com/gF6Vs/MAEtuQgF6Vs/1/s.svg" alt="img">
+  </div>
+  <div class="imgBox leftBottom">
+    <img src="https://media-public.canva.com/UPJ0w/MAEtuXUPJ0w/1/s.svg" alt="img">
+  </div>
+  <div class="container">
+    <h1 class="title">Merry Christmas</h1>
+    <h4 class="subTitle">12/25 18:30 CHRISTMAS PARTY</h4>
+    <h4 class="description">Dress code:Red、Green、Blue</h4>
+  </div>
+</body>
+</html>
